@@ -23,7 +23,7 @@ struct StoryBrain {
         Story(
             title: "As you begin to drive, the stranger starts talking about his relationship with his mother. He gets angrier and angrier by the minute. He asks you to open the glovebox. Inside you find a bloody knife, two severed fingers, and a cassette tape of Elton John. He reaches for the glove box.",
             choice1: "I love Elton John! Hand him the cassette tape.",
-            choice2: "It's him or me! You take the knife and stab him."    ),
+            choice2: "It's him or me! You take the knife and stab him."),
         Story(
             title: "What? Such a cop out! Did you know traffic accidents are the second leading cause of accidental death for most adult age groups?",
             choice1: "The",
@@ -41,8 +41,18 @@ struct StoryBrain {
         )
     ]
     
+    var storyNumber = 0
+    
     
     func getStoryText() -> String {
-        return stories[0].title
+        return stories[storyNumber].title
+    }
+    
+    func getStoryChoiceOne() -> String {
+        return stories[storyNumber].choice1
+    }
+    
+    func getStoryChoiceTwo() -> String {
+        return stories[storyNumber].choice2
     }
 }
